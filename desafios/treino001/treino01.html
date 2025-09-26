@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meteorologia Estática</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --fundo: #0b1d33;
+    --painel: #132f4c;
+    --azul: #2563eb;
+    --azul-escuro: #1e40af;
+    --texto: #ffffff;
+    --cinza: rgba(255,255,255,0.7);
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0b1d33 0%, #0a2239 100%);
+    color: var(--texto);
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+  header p {
+    margin-top: .5rem;
+    color: var(--cinza);
+  }
+
+  .tabs {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--painel);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  /* Esconde os inputs */
+  .tabs input[type="radio"] {
+    display: none;
+  }
+
+  /* Barra de navegação das abas */
+  .tab-labels {
+    display: flex;
+    background: var(--azul-escuro);
+  }
+  .tab-labels label {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background .25s, color .25s;
+  }
+  .tab-labels label:hover {
+    background: rgba(255,255,255,0.1);
+  }
+
+  /* Conteúdo */
+  .content {
+    display: none;
+    padding: 2rem;
+    animation: fade .4s ease;
+  }
+  @keyframes fade {
+    from {opacity:0; transform: translateY(10px);}
+    to   {opacity:1; transform: translateY(0);}
+  }
+
+  /* Exibe o conteúdo da aba ativa */
+  #hoje:checked ~ .conteudo #c1,
+  #amanha:checked ~ .conteudo #c2,
+  #semana:checked ~ .conteudo #c3 {
+    display: block;
+  }
+
+  /* Estilo da aba ativa */
+  #hoje:checked + label,
+  #amanha:checked + label,
+  #semana:checked + label {
+    background: var(--azul);
+    color: var(--texto);
+  }
+
+  /* Estilo do texto interno */
+  .content h2 {
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+  }
+  .content p, .content li {
+    color: var(--cinza);
+    margin-bottom: .5rem;
+    font-size: 1.05rem;
+  }
+  .content ul { padding-left: 1.2rem; }
+
+  footer {
+    text-align: center;
+    margin-top: auto;
+    padding-top: 2rem;
+    color: var(--cinza);
+    font-size: .9rem;
+  }
+
+  /* Responsividade */
+  @media (max-width:600px){
+    .tab-labels label { font-size: .95rem; padding: .8rem; }
+    .content { padding: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Previsão Meteorológica</h1>
+  <p>Interação 100% em HTML + CSS</p>
+</header>
+
+<section class="tabs">
+  <!-- Controles -->
+  <input type="radio" id="hoje" name="aba" checked>
+  <label for="hoje">Hoje</label>
+
+  <input type="radio" id="amanha" name="aba">
+  <label for="amanha">Amanhã</label>
+
+  <input type="radio" id="semana" name="aba">
+  <label for="semana">Semana</label>
+
+  <!-- Conteúdo -->
+  <div class="conteudo">
+    <div id="c1" class="content">
+      <h2>Hoje</h2>
+      <p>Temperatura: 27 °C</p>
+      <p>Condição: Céu limpo com ventos moderados do sudeste.</p>
+    </div>
+
+    <div id="c2" class="content">
+      <h2>Amanhã</h2>
+      <p>Temperatura: 24 °C</p>
+      <p>Condição: Parcialmente nublado, chance de chuva 30% à tarde.</p>
+    </div>
+
+    <div id="c3" class="content">
+      <h2>Semana</h2>
+      <ul>
+        <li>Segunda: 25 °C — Ensolarado</li>
+        <li>Terça: 22 °C — Chuva leve</li>
+        <li>Quarta: 26 °C — Céu limpo</li>
+        <li>Quinta: 21 °C — Nublado</li>
+        <li>Sexta: 23 °C — Sol com nuvens</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Previsão Meteorológica
+</footer>
+
+</body>
+</html>

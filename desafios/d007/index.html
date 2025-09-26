@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Flexível</title>
+</head>
+<body>
+    <h1>Imagem Flexível</h1>
+    <p>A imagem está grande? Experimente aumentar sua janela.</p>
+    <hr>
+    <picture>
+    
+    <!-- Quando a tela for até 1050px, usa esta imagem média -->
+    <source media="(max-width: 500px)" srcset="imagens/imagem-p.jpg" type="image/jpeg">
+
+    <!-- Caso contrário, usa a imagem maior -->
+    <img src="imagens/imagem-m.jpg" alt="Imagem Flexível" height="350">
+</picture>
+
+    
+    
+</body>
+</html>

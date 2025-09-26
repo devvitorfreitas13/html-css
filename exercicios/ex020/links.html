@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-br"> <!-- Início do documento HTML com idioma definido como português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 (suporta acentuação) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para dispositivos móveis -->
+    <title>Links</title> <!-- Título da aba do navegador -->
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; /* Define a fonte usada no corpo da página */
+        }
+
+        a {
+            color: red; /* Cor padrão dos links */
+            text-decoration: none; /* Remove o sublinhado padrão dos links */
+            font-weight: bold; /* Deixa o texto dos links em negrito */
+        }
+
+        a:visited {
+            color: rgb(11, 231, 48); /* Cor dos links já visitados */
+        }
+
+        a:hover {
+            color: black; /* Cor quando o mouse passa por cima do link */
+            text-decoration: underline; /* Sublinha o link ao passar o mouse */
+        }
+        .especial::before{
+            content: '⇒' ;
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray;
+
+        }
+
+        .especial{
+            background-color: bisque;
+        }
+
+        a:active {
+            color: blue; /* Cor do link enquanto ele está sendo clicado */
+        }
+        .especial::after { /* Seleciona o pseudo-elemento após cada link <a> */
+    content: '⇐'; /* Adiciona o texto '[link]' automaticamente após o link */
+    text-decoration: none; /* Remove qualquer decoração (como sublinhado) desse texto */
+    font-weight: normal; /* Define o peso da fonte como normal (sem negrito) para o texto '[link]' */
+    color: darkgray; /* Define a cor do texto '[link]' como cinza escuro */
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>Personalizando Links</h1> <!-- Título principal da página -->
+
+    <ul> <!-- Lista não ordenada -->
+        <li>
+            <a href="https://gustavoguanabara.github.io" target="_blank">
+                Repositório GitHub
+            </a> <!-- Link que abre em nova aba para o repositório do GitHub -->
+        </li>
+
+        <li>
+            <a href="https://youtube.com/cursoemvideo" class="especial" target="_blank">
+                Canal do Youtube
+            </a> <!-- Link que abre em nova aba para o canal do YouTube -->
+        </li>
+
+        <li>
+            <a href="https://www.cursoemvideo.com" class="especial" target="_blank">
+                Site do CursoEmVideo
+            </a> <!-- Link que abre em nova aba para o site do Curso em Vídeo -->
+        </li>
+    </ul>
+
+</body>
+</html>

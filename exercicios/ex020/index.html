@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Temperatura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, select {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 8px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+        .resultado {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperatura</h1>
+    <form action="/converter" method="post">
+        <input type="number" name="valor" placeholder="Digite o valor" required>
+        <select name="tipo">
+            <option value="c_para_f">Celsius para Fahrenheit</option>
+            <option value="f_para_c">Fahrenheit para Celsius</option>
+        </select>
+        <button type="submit">Converter</button>
+    </form>
+</body>
+</html>

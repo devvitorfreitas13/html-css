@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+body{
+    background-color: black;
+    font-family: cinzel;
+    font-size: x-large;
+}
+h1{
+    color: white;
+}
+p{
+    color: white
+}

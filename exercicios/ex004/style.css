@@ -1,0 +1,20 @@
+@charset "UTF-8";
+  .texto-centralizado {
+    text-align: center; /* Esta propriedade centraliza o texto horizontalmente */
+  }
+  body{
+    background-color: rgb(206, 21, 52);
+  }
+  h1{
+    color: blanchedalmond;
+    font-size: xx-large;
+    font-family: cinzel;
+  }
+  p{
+    color: white;
+    font-family: cinzel;
+  }
+  img {
+  max-width: 100%;
+  height: auto;
+}
