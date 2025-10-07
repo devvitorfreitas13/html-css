@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            background-color: white;
+            border-collapse: collapse;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            
+        }
+
+        th, td {            
+            width: 100px;
+            padding: 15px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        table > caption {
+            width: 300px;
+            background-color: rgba(17, 83, 61, 0.571);
+            margin: 0 0 50px 115px;
+        }
+        col.amarelo {
+            background-color: rgb(249, 249, 150);
+        }
+
+        col.cinza {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercício de Tabela</h1>
+    <table>
+        <colgroup>
+            <col class="amarelo">
+            <col class="cinza" span="">
+            <col class="amarelo">
+            <col class="cinza">
+        </colgroup>
+
+        <caption>
+            Aprendendo Colunas em Grupo
+        </caption>
+
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sexo</th>
+                <th>Idade</th>
+                <th>Profissão</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Vitor</td>
+                <td>M</td>
+                <td>27</td>
+                <td>Programador</td>
+            </tr>
+
+            <tr>
+                <td>Viviane</td>
+                <td>F</td>
+                <td>28</td>
+                <td>Enfermeira</td>
+            </tr>
+
+            <tr>
+                <td>Pedro</td>
+                <td>M</td>
+                <td>27</td>
+                <td>Professor</td>
+            </tr>
+
+            <tr>
+                <td>Aline</td>
+                <td>F</td>
+                <td>24</td>
+                <td>Administração</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>
