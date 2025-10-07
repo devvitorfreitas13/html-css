@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: antiquewhite;
+        }
+
+        th, td {
+            border: 1px solid black;
+            width: 200px;
+            text-align: center;
+            background-color: white;
+            padding: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th.title {
+            background-color: lightblue;
+        }
+        th {
+            background-color: lightcyan;
+        }
+
+        caption {
+            font-size: 2em;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Exercício de Tabela</h1>
+    <table>
+        <caption>
+            Filmes Favoritos
+        </caption>
+        <thead>
+            <tr>
+                <th class="title" scope="col">Grupo</th>
+                <th class="title" scope="col">Nomes</th>
+                <th class="title" colspan="3" scope="colgroup">Filmes</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th rowspan="3" scope="rowgroup">Mulheres</th>
+                <td>Maria</td>
+                <td>Vingadores</td>
+                <td>Homem-Aranha</td>
+                <td>Apocalipse</td>
+            </tr>
+             <tr>
+                <td>Maria</td>
+                <td>Vingadores</td>
+                <td>Homem-Aranha</td>
+                <td>Apocalipse</td>
+            </tr>
+             <tr>
+                <td>Maria</td>
+                <td>Vingadores</td>
+                <td>Homem-Aranha</td>
+                <td>Apocalipse</td>
+            </tr>
+             <tr>
+                <th rowspan="3" scope="rowgroup">Homens</th>
+                <td>Vitor</td>
+                <td>Homem de Ferro 1</td>
+                <td>Ultimato</td>
+                <td>Carros</td>
+            </tr>
+             <tr>
+                <td>Vitor</td>
+                <td>Homem de Ferro 1</td>
+                <td>Ultimato</td>
+                <td>Carros</td>
+            
+            </tr>
+
+             <tr>
+                <td>Vitor</td>
+                <td>Homem de Ferro 1</td>
+                <td>Ultimato</td>
+                <td>Carros</td>
+            
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <th colspan="4" scope="row">Total</th>
+            <td>1500</td>
+        </tfoot>
+
+ 
+
+    </table>
+    
+</body>
+</html>
