@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe 002</title>
+    <style>
+        iframe {
+            background-color: lightpink;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste com iframe</h1>
+
+    <ul>
+        <li><a href="paginas/pagina001.html" target="frame">1 - Esse link vai para primeira página</a></li>
+        <li><a href="paginas/pagina002.html" target="frame">2 - Esse link vai para segunda página</a></li>
+        <li><a href="paginas/pagina003.html" target="frame">3 - Esse link vai para terceiro página</a></li>
+    </ul>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates explicabo voluptate eligendi, aut ducimus aliquam? Molestias atque, magni similique iusto eaque deleniti nobis corporis perferendis, omnis recusandae, saepe natus tenetur!
+    </p>
+
+    <iframe id="tela" name="frame" srcdoc="<h1>Inicio</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ducimus perferendis asperiores quasi minima beatae. Amet quae quos ad quibusdam quidem accusamus suscipit aperiam libero tempore hic id, debitis iste.</p>" frameborder="0" width="95%" height="300px"></iframe>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ducimus perferendis asperiores quasi minima beatae. Amet quae quos ad quibusdam quidem accusamus suscipit aperiam libero tempore hic id, debitis iste.
+    </p>
+    
+</body>
+</html>
